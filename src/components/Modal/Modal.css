@@ -1,0 +1,59 @@
+.modal{
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: fadeIn 0.3s ease forwards;
+}
+.modal .modalContent{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.723);
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: slideDown 0.4s ease forwards;
+    
+}
+
+.modal .modalContent button{
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    top: 5px;
+    right: 10px;
+    padding: 5px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.modal .modalContent span{
+    color: rgb(18, 18, 18);
+    font-size: 1rem;
+}
+
+/* Keyframe for sliding modal */
+@keyframes slideDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional fade for overlay */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

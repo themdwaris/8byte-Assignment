@@ -1,0 +1,72 @@
+.todoContent {
+  width: 100%;
+  padding: 10px;
+  line-height: 10px;
+  border-radius: 10px;
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.todoContent .text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todoContent .text p{
+  white-space: normal;     /* Allow wrapping */
+  overflow: hidden;        /* Hide overflow content */   /* 👈 hide extra */
+  max-width: 350px; 
+  word-break: break-word;     /* ✅ long word ko break karega */
+  overflow-wrap: break-word;  /* ✅ older support ke liye */
+  line-height: 1.4; 
+ 
+}
+.todoContent .actionBtns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+.todoContent button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.todoContent button:active{
+    transform: scale(0.95);
+}
+.todoContent .completed{
+    color: white;
+}
+.completed span{
+    color: #019134
+}
+.line{
+  text-decoration: line-through;
+}
+
+.todoItem {
+ /* Tailwind bg-gray-400 */
+  padding: 0.7rem;             /* Tailwind p-4 */
+  border-radius: 0.5rem;     /* Tailwind rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind shadow-md */
+  cursor: grab;              /* Tailwind cursor-grab */
+  opacity: 1;                /* Default: opacity-100 */
+  transition: opacity 0.2s ease;
+  touch-action: none
+  
+}
+.dragBtn{
+  color: whitesmoke;
+  padding-block: 5px;
+  user-select: none;
+  border: 2px solid white;
+  display: inline-block;
+  touch-action: none; /* Make sure drag button supports it too */
+  cursor: grab;
+}

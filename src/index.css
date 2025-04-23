@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bgColor: #0b0909;
+  --textColor: #f4f4f4;
+  --main: #019134;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+}
+
+/******Todo header*******/
+.main {
+  padding-inline: 20px;
+  position: relative;
+  padding-bottom: 40px;
+}
+.header {
+  text-align: center;
+  padding-block: 40px;
+  font-size: 2rem;
+}
+.header span {
+  color: var(--main);
+}
+.inputForm {
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputForm input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.114);
+  border-radius: 12px;
+  padding: 14px;
+  color: var(--textColor);
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+.inputForm .addBtn {
+  padding-inline: 8px;
+  padding-block: 4px;
+  line-height: 4px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--main);
+  color: var(--textColor);
+  font-size: 1.5rem;
+}
+.inputForm .addBtn:active {
+  transform: scale(0.95);
+}
+
+.inputForm .tabBtn {
+  padding-inline: 8px;
+  padding-block: 12px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 180px;
+  background-color: var(--main);
+  color: var(--textColor);
+  font-size: 1rem;
+}
+
+.todoList {
+  width: 100%;
+  max-width: 500px;
+  overflow-y: auto;
+  margin-inline: auto;
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  display: block;
+  max-height: 500px;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+.dragDiv {
+  width: 100%; /* Add this to prevent shifting */
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  width: 100%; /* Very important */
+}
+
+/********* Search and Tab ***************/
+
+.searchAndTab {
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.searchAndTab .tabBtn {
+  padding-inline: 6px;
+  padding-block: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 150px;
+  font-weight: 500;
+  background-color: var(--main);
+  color: var(--textColor);
+  font-size: 0.9rem;
+}
+.searchAndTab input {
+  background-color: transparent;
+  color: var(--textColor);
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+.searchAndTab .search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.114);
+  border-radius: 12px;
+  padding-block: 6px;
+  padding-inline: 14px;
+  line-height: 6px;
+}
+.searchAndTab .search input {
+  width: 100%;
+}
+.searchAndTab .search button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.title{
+  padding-block: 5px;
+  line-height: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .searchAndTab .tabBtn {
+    width: 140px;
+    padding-inline: 4px;
+    padding-block: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+}
+.todoList li {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+
+.scrollable-hidden-scrollbar {
+  overflow-x: scroll;
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.scrollable-hidden-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+.hide-scrollbar {
+  overflow: auto;              /* scrolling allowed */
+  scrollbar-width: none;       /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari */
+}
+
+

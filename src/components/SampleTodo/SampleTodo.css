@@ -1,0 +1,47 @@
+.sampleTodo {
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.3s ease forwards;
+  padding-inline: 20px;
+}
+.sampleTodo .sampleContent h1{
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.sampleTodo .sampleContent {
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+  max-height: 450px;
+  overflow-y: auto;
+}
+.title{
+    padding-block: 5px;
+    line-height: 10px;
+  }
+
+/* Keyframe for sliding modal */
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional fade for overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
