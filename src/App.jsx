@@ -6,7 +6,6 @@ import { FcSearch } from "react-icons/fc";
 import { useTodo } from "./context/TodoContext";
 import TodoList from "./components/TodoList/TodoList";
 import Modal from "./components/Modal/Modal";
-
 import SampleTodo from "./components/SampleTodo/SampleTodo";
 import {
   DndContext,
@@ -19,7 +18,6 @@ import {
 import {
   SortableContext,
   verticalListSortingStrategy,
-  useSortable,
   arrayMove,
 } from "@dnd-kit/sortable";
 
